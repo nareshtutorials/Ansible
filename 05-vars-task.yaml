@@ -5,13 +5,14 @@
     Trainer: "siva"
     Duration: "15hrs"
   tasks:
-  - name: print information
+  - name: print override information
     vars:
       course: "Devops"
     ansible.builtin.debug:
       msg: "Hii, we are learning {{course}} from tainer {{Trainer}},Duration is {{Duration}}."
-    
+  
+  - name: print information
     ansible.builtin.debug:
-       msg: "Hii, we are learning {{course}} from tainer {{Trainer}},Duration is {{Duration}}."
+       msg: "Hii, we are learning {{ourse}} from tainer {{Trainer}},Duration is {{Duration}}."
 
      
