@@ -1,9 +1,9 @@
--name: variables from files
- hosts: web
- vars_prompt:
- - name: USERNAME
-   prompt: pls enter your username
-   private: false
+- name: variables from files
+  hosts: web
+  vars_prompt:
+  - name: USERNAME
+    prompt: pls enter your username
+    private: false
 
  - name: PASSWORD
    prompt: pls enter your password
