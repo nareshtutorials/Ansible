@@ -2,11 +2,11 @@
   hosts: localhost
   vars:
     course: Devops
-     Tools:
-     - Linux
-     - Ansible
-     - puppet
-     - chef
+    Tools:
+    - Linux
+    - Ansible
+    - puppet
+    - chef
 
     Experience:
      Linux: 3
@@ -14,7 +14,7 @@
      puppet : 1
      chef : 1
     
-   Realproject: true
+    Realproject: true
   tasks:
   - name: print variables
     ansible.builtin.debug:
