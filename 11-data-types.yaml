@@ -1,0 +1,26 @@
+- name: datatypes
+  hosts: localhost
+  vars:
+    course: Devops
+     Tools:
+     - Linux
+     - Ansible
+     - puppet
+     - chef
+
+    Experience:
+     Linux: 3
+     Ansible: 1
+     puppet : 1
+     chef : 1
+    
+   Realproject: true
+  tasks:
+  - name: print variables
+    ansible.builtin.debug:
+     msg: "course: {{course}}", Tolls covered:{{Tools}}, Experience {{Experience}} and real time {{Realproject}}."      
+
+   
+   
+
+
