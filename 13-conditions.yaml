@@ -1,0 +1,16 @@
+- name: conditions
+  hosts: web
+  vars_prompt:
+  - name: number
+    prompt: pls enter number
+    private: no
+
+  - name: The entered number is lessthan 10
+    ansible.builtin.debug:
+     msg: "The entered number is:{{number}},is lessthan 10"
+    
+  - name: number is greater than 10
+    ansible.builtin.debug:
+     msg: "The given number:{{number}}, greater than 10 "
+  
+  -
