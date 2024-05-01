@@ -14,7 +14,7 @@
       Aws : 4
       Devops: 1
 
-    Real time project: true
+    Realtimeproject: true
 
   tasks:
   - name: print variables
