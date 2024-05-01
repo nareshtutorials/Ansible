@@ -1,24 +1,29 @@
-- name: datatypes
-  hosts: localhost
+- name: datatypes 
+  hosts: web
   vars:
-    course: Devops
-    Tools:
-    - Linux
-    - Ansible
-    - puppet
-    - chef
-
-    Experience:
-     Linux: 3
-     Ansible: 1
-     puppet : 1
-     chef : 1
+    course: "Devops with Aws"
     
-    Realproject: true
-  tasks:
-  - name: print variables
-    ansible.builtin.debug:
-     msg: "course: {{course}}, Tolls covered: {{Tools}}, Experience: {{Experience}} and real time: {{Realproject}}."      
+  Tools:
+  - Ansible
+  - chef
+  - puppet
+  - scripting
+
+  Experience:
+    Linux: 3
+    Aws : 4
+    Devops: 1
+
+  Real time project: true
+
+tasks:
+- name: print the variables
+  ansible.builtin.debug:
+    msg: "Iam Learning: {{course}}, Tools covered: {{Tools}}, Experience is: {{Experience}} and Realtime project is: Realtimeproject is:{{Realtimeproject}}."
+
+
+
+
 
    
    
