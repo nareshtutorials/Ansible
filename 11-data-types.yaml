@@ -3,24 +3,23 @@
   vars:
     course: "Devops with Aws"
     
-  Tools:
-  - Ansible
-  - chef
-  - puppet
-  - scripting
+    Tools:
+    - Ansible
+    - chef
+    - puppet
+    - scripting
 
-  Experience:
-    Linux: 3
-    Aws : 4
-    Devops: 1
+    Experience:
+     Linux: 3
+     Aws : 4
+     Devops: 1
 
-  Real time project: true
+    Real time project: true
 
-tasks:
-- name: print the variables
-  ansible.builtin.debug:
-    msg: "Iam Learning: {{course}}, Tools covered: {{Tools}}, Experience is: {{Experience}} and Realtime project is: Realtimeproject is:{{Realtimeproject}}."
-
+  tasks:
+  - name: print variables
+    ansible.builtin.debug:
+      msg: "Iam Learning: {{course}}, Tools covered: {{Tools}}, Experience is: {{Experience}} and Realtime project is: Realtimeproject is:{{Realtimeproject}}
 
 
 
