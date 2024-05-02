@@ -3,8 +3,7 @@
   tasks:
   - name: print default value
     ansible.buitin.debug:
-      msg: "Iam planning to:{{ course | default('Devops') }}"
-
+      msg: "Iam planning to {{ course | default('Devops') }}"
 
 
 
