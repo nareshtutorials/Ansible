@@ -3,7 +3,7 @@
   tasks:
   - name: print default value
     ansible.builtin.debug:
-      msg: "Hello {{course | default('Ansible') }}"  
+      msg: "Iam learning {{git | default('Myself') }}"  
 
 
 
