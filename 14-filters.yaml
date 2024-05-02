@@ -1,6 +1,6 @@
 - name: default values
   hosts: web
   tasks:
-  - name: print default values
+  - name: print default value
     ansible.buitin.debug:
       msg: "Iam planning to:{{ prepare | default('myself') }}"
