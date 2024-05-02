@@ -3,7 +3,18 @@
   tasks:
   - name: print default value
     ansible.builtin.debug:
-      msg: "Iam learning {{git | default('Myself') }}"  
+      msg: "Iam learning {{git | default('Myself') }}" 
+
+- name: print the variables
+  vars:
+    course: iam joining devops course
+tasks:  
+- name: convert the variable into uppercase
+  ansible.builtin.debug:
+    msg: "hello iam {{course | upper }}"
+
+    
+
 
 
 
