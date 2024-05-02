@@ -6,8 +6,8 @@
       msg: "Iam learning {{git | default('Myself') }}" 
 
 
-- name: upper case
-  host: web
+- name: uppercase
+  host: localhost
   vars:
     greeting: "Hello, Good Morning"
   tasks:
