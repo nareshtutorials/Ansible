@@ -3,4 +3,4 @@
   tasks:
   - name: print default value
     ansible.buitin.debug:
-      msg: "Iam planning to:{{ prepare | default('myself') }}"
+      msg: "Iam planning to:{{ course | default('Devops') }}"
