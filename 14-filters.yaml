@@ -6,6 +6,7 @@
       msg: "Iam learning {{git | default('Myself') }}" 
 
 - name: print the variables
+  hosts: localhost
   vars:
     course: iam joining devops course
 tasks:  
