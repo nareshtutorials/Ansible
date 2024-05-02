@@ -18,12 +18,12 @@
 
 - name: lower case
   hosts: localhost
+  vars:
+    greeting: "Hello, Good Morning"
   tasks:
   - name: convert to lower case
     ansible.builtin.debug:
     msg: "{{ greeting | lower }}"
-
-
 
 
 
