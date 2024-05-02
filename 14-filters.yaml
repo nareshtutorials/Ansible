@@ -5,14 +5,20 @@
     ansible.builtin.debug:
       msg: "Iam learning {{git | default('Myself') }}" 
 
-- name: print the variables
-  hosts: localhost
+
+- name: upper case
+  host: web
   vars:
-    course: "iam joining devops course"
-tasks:  
-- name: convert the variable into uppercase
-  ansible.builtin.debug:
-    msg: "hello iam {{course | upper }}"
+    greeting: "Hello, Good Morning"
+  tasks:
+  - name: conver into uppercase
+    ansible.builtin.debug:
+    msg: "{{greeting | upper}}"
+
+
+
+
+
 
 
 
