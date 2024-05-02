@@ -6,14 +6,16 @@
       msg: "Iam learning {{git | default('Myself') }}" 
 
 
-- name: uppercase
-  host: localhost
+- name: upper case
+  hosts: localhost
   vars:
     greeting: "Hello, Good Morning"
   tasks:
-  - name: conver into uppercase
+  - name: convert into uppercase
     ansible.builtin.debug:
-    msg: "{{greeting | upper}}"
+      msg: "{{ greeting | upper }}"
+
+
 
 
 
