@@ -1,9 +1,7 @@
+
 - name: default value
-  hosts: web
+  hosts: localhost
   tasks:
   - name: print default value
-    ansible.buitin.debug:
-      msg: "Iam planning to {{ course | default('Devops') }}"
-
-
-
+    ansible.builtin.debug:
+      msg: "Hello {{course | default('Ansible') }}"
