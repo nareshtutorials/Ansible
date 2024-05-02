@@ -18,8 +18,10 @@
 
 - name: lower case
   hosts: localhost
-  ansible.builtin.debug:
-    msg: "{{ greeting | lower}}"
+  tasks:
+  - name: conver to lower case
+    ansible.builtin.debug:
+    msg: "{{ greeting | lower }}"
 
 
 
