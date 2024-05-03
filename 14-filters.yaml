@@ -43,16 +43,16 @@
       msg: "{{numbers | unique}}"
 
 - name: converting dictionary in to items/list
-  hosts: web
+  hosts: localhost
   vars:
     my_dict: 
     couse: Devops
     Trainer: shiva
-    Duration: 120  hrs
+    Duration: 120hrs
   tasks:
   - name: before convert
     ansible.builtin.debug:
-    msg: "before convert: {{ my_dict }}"
+      msg: "Before convert: {{ my_dict }}"
   
  
 
