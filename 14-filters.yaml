@@ -45,15 +45,10 @@
 - name: converting dictionary in to items/list
   hosts: localhost
   vars:
-    my_dict: 
-    couse: Devops
-    Trainer: shiva
-    Duration: 120hrs
-  
-  my_dict: # this is called as dictionary or map or key/value pairs.
-      Course: Ansbile
-      Trainer: Sivakumar
-      Duration: 120hr
+    my_dict: # this is called as dictionary or map or key/value pairs.
+     course: Ansbile
+     Trainer: Sivakumar
+     Duration: 120hr
   tasks:
   - name: before convert
     ansible.builtin.debug:
