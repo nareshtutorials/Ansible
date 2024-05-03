@@ -41,6 +41,18 @@
   - name: remove duplicates
     ansible.builtin.debug:
       msg: "{{numbers | unique}}"
+
+- name: converting dictionary in to items/list
+  hosts: web
+  vars:
+    my_dict: 
+    couse: Devops
+    Trainer: shiva
+    Duration: 120  hrs
+  tasks:
+  - name: before convert
+    ansible.builtin.debug:
+    msg: before convert {{my_dict}}
   
  
 
