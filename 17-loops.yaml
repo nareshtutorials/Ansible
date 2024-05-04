@@ -4,8 +4,8 @@
   tasks:
   - name: install packages
     ansible.builtin.dnf:
-    name: "{{ item,name }}"
-    state: "{{ item,state }}"
+    name: "{{ item.name }}"
+    state: "{{ item.state }}"
 
     loop:
     - { name: 'mysql', state: 'latest' }
@@ -14,8 +14,6 @@
 
 
   
-
-
 
 
 
