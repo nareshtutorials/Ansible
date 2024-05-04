@@ -1,0 +1,16 @@
+- name: install packages
+  hosts: localhosts
+  become: yes
+  tasks:
+  - name: install packages
+    ansible.builtin.debug:
+      name: "{{item}}"
+      state: "{{latest}}"
+    loop:
+    - mysql
+    - nginx
+    - postfix
+
+
+      
+      
