@@ -1,10 +1,11 @@
 
+
 - name: install packages
   hosts: web
   become: yes
   tasks:
   - name: install packages
-    ansible.builtin.dnf:
+    ansible.builtin.debug:
       name: "{{ item }}"
       state: latest
     loop:
