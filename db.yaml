@@ -22,7 +22,7 @@
   - name: install python dependencies for mysql server
     ansible.builtin.pip:
       name:
-      - pymysql
+      - pyMySQL
       - cryptography
     executable: pip3.9
 
