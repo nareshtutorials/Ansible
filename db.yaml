@@ -42,10 +42,3 @@
     msg: "Output: {{ mysql_connection_output }}"
 
 
-
-- name: install python mysql dependencies
-    ansible.builtin.pip:
-      name:
-      - pyMySQL
-      - cryptography
-    executable: pip3.9
