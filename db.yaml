@@ -34,7 +34,7 @@
       login_user: root
       login_password: "{{ mysql_root_password}}"
       filter: version
-      ignore_error: yes
+    ignore_error: yes
     register: mysql_connection_output
 
   - name: print output
