@@ -1,10 +1,11 @@
 - name: cofigure db server
   hosts: db
+  become: yes
   vars:
     login_host: db.172.31.22.162
   vars_prompt:
-  - name: Mysql_root_password
-    prompt: please enter Mysql_root_password
+  - name: mysql_root_password
+    prompt: please enter Mysql root password
     private: no
 
   tasks:
