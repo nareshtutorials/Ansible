@@ -18,13 +18,14 @@
     ansible.builtin.service:
       name: mysqld
       state: started
-
-  - name: install python dependencies for mysql server
+  
+  - name: install python mysql dependencies
     ansible.builtin.pip:
       name:
-      - pyMySQL
+      - PyMySQL
       - cryptography
-    executable: pip3.9
+      executable: pip3.9 # pip3.11 if python version is 3.11
+  
 
     #check password already set or not
 
@@ -41,3 +42,10 @@
     msg: "Output: {{ mysql_connection_output }}"
 
 
+
+- name: install python mysql dependencies
+    ansible.builtin.pip:
+      name:
+      - pyMySQL
+      - cryptography
+    executable: pip3.9
