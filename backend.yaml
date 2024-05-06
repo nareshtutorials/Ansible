@@ -1,6 +1,9 @@
 - name: configuring backend server
   hosts: backend
   become: yes
+  vars:
+    login_host: db.172.31.18.216
+    login_password: ExpenseApp@
 
   tasks:
   
