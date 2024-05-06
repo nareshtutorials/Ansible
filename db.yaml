@@ -19,10 +19,10 @@
       name: mysqld
       state: started
 
-  - name: install python dependencies for mysql
+  - name: install python mysql dependencies
     ansible.builtin.pip:
       name:
-      - pyMySQL
+      - PyMySQL
       - cryptography
     executable: pip3.9
     
