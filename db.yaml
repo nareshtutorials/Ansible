@@ -31,8 +31,9 @@
       login_user: root
       login_password: "{{ mysql_root_password }}"
       login_host: "{{ login_host }}"
-      ignore_errors: yes
-      register: mysql_connection_output 
+      filter: version
+    ignore_errors: yes
+    register: mysql_connection_output 
 
   - name: print information
     ansible.builtin.debug:
@@ -45,3 +46,4 @@
     when: mysql_connection_output.failed is true # don't give {{ }} in when condition
 
 
+ 
