@@ -1,5 +1,5 @@
 - name: configuring backend server
-  hosts: Backend
+  hosts: backend
   become: yes
 
   tasks:
