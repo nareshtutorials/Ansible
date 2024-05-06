@@ -36,10 +36,9 @@
     register: mysql_connection_output 
 
 
-  - name: print information
+  - name: print output
     ansible.builtin.debug:
-      msg: "output: {{ mysql_connection_output }}"
-    
+      msg: "Output: {{mysql_connection_output}} "
 
   - name: setup root password
     ansible.builtin.command: "mysql_secure_installation --set-root-pass {{ mysql_root_password }}"
