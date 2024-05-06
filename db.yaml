@@ -11,7 +11,7 @@
   tasks:
   - name: install mysql server
     ansible.builtin.dnf:
-      name: MySQl-server
+      name: mysql-server
       state: latest
 
   - name: strat and enable mysql server
