@@ -5,7 +5,7 @@
     login_host: db.daws78s.online
   vars_prompt:
   - name: mysql_root_password
-    prompt: please enter mysql root password
+    prompt: please enter MySQL root password
     private: no
   tasks:
   - name: Install MySQL Server
