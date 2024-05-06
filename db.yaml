@@ -2,7 +2,7 @@
   hosts: db
   become: yes
   vars:
-    log_hosts: db.172.31.18.216
+    log_host: db.172.31.18.216
   vars_prompt:
   - name: mysql_root_password
     prompt: pls enter root password
@@ -30,7 +30,7 @@
     community.mysql.mysql_info:
       login_user: root
       login_password: "{{ mysql_root_password }}"
-      login_host: "{{ login_hosts }}"
+      login_host: "{{ login_host }}"
       ignore_errors: yes
       register: "{{ mysql_connection_output }}"
 
