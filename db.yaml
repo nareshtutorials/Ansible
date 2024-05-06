@@ -1,45 +1,43 @@
-- name: configuring db server
+- name: configure Database mysql server
   hosts: db
   become: yes
   vars:
-    login_host: db.172.31.22.162
+    log_hosts: db.172.31.18.216
   vars_prompt:
   - name: mysql_root_password
-    prompt: please enter root password
-    private: no
+    prompt: pls enter root password
+    private: yes
 
   tasks:
   - name: install mysql server
     ansible.builtin.dnf:
-      name: mysql-server
+      name: MySQl-server
       state: latest
 
-  - name: start and enable mysql server
+  - name: strat and enable mysql server
     ansible.builtin.service:
       name: mysqld
       state: started
-  
-  - name: install python mysql dependencies
+
+  - name: installing python dependencies in mysql server
     ansible.builtin.pip:
-      name:
-      - PyMySQL
+      name: 
+      - pyMySQL
       - cryptography
-      executable: pip3.9 # pip3.11 if python version is 3.11
-  
-
-    #check password already set or not
-
+    executable: python 3.9
+    
   - name: check DB connection
     community.mysql.mysql_info:
       login_user: root
-      login_password: "{{ mysql_root_password}}"
-      filter: version
-    ignore_error: yes
-    register: mysql_connection_output
+      login_password: "{{ mysql_root_password }}"
+      login_host: "{{login_host}}"
+      ignore_errors: yes
+      register: "{{ mysql_connection_output }}"
 
-  - name: print output
+  - name: print information
     ansible.builtin.debug:
-      msg: "output: {{ mysql_connection_output }}"
+      msg: "{{ mysql_connection_output }}"
+    
 
 
   - name: setup root password
